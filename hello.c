@@ -1,10 +1,11 @@
-/* Hello World program */
+#include <stdio.h>
 
-#include<stdio.h>
-
-main()
+int main ()
 {
-    printf("Hello World");
-    test
-
+    
+  e(x) = (m + k)(mod26) // encryption function formula. NOTE: if dealing with negative numbers jst add 26 to mkae the result +ve
+  
+  d(c) = (c-k)(mod26) // decryption function formula
+  
+  return 0;
 }
