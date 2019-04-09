@@ -22,4 +22,5 @@ int main()
   printf("%c\n", &c, text[1] + 1);*/
   
   
+  
   }
