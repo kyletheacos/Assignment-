@@ -1,11 +1,25 @@
 #include <stdio.h>
-
-int main ()
+ char str[100];
+    int key= 1; // how far to rotate
+    int count = 0; // initalised
+    //test
+int main()
 {
-    
-  e(x) = (m + k)(mod26) // encryption function formula. NOTE: if dealing with negative numbers jst add 26 to mkae the result +ve
-  
-  d(c) = (c-k)(mod26) // decryption function formula
-  
-  return 0;
+  printf("Enter the message to encrypt:");
+  scanf("%[^\n]s",str);
+    for (count = 0; count < 100 && str[count] !='\0'; count++){
+    str[count]=(str[count]-97+key)%26 + 97;
+    }
+    printf("Encrypted message: %s\n", str);
 }
+
+
+
+
+   /* char c;
+	char text[101] = {'h', 'e', 'l', 'l', 'o', '\0'};
+  
+  printf("%c\n", &c, text[1] + 1);*/
+  
+  
+  }
