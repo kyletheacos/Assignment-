@@ -5,12 +5,19 @@
     //test
 int main()
 {
-  printf("Enter the message to encrypt:");
+    printf("Please select an option: \n");
+    printf("a) Encryption Rotation Cipher\n");
+    printf("b) Decryption Rotation Cipher\n");
+    printf("c) Encryption Substitution Cipher\n");
+    printf("d) Decryption Substitution Cipher\n\n");
+    printf("Selection: \n");
+    printf("Enter the message to encrypt:\n");
   scanf("%[^\n]s",str);
     for (count = 0; count < 100 && str[count] !='\0'; count++){
     str[count]=(str[count]-97+key)%26 + 97;
     }
     printf("Encrypted message: %s\n", str);
+}
 }
 
 
@@ -23,4 +30,4 @@ int main()
   
   
   
-  }
+  
