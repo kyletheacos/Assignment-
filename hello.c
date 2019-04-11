@@ -5,7 +5,7 @@
     //test
 int main()
 {
-    printf("Please select an option: \n");
+    printf("Please select an option: \n"); //menu option 
     printf("a) Encryption Rotation Cipher\n");
     printf("b) Decryption Rotation Cipher\n");
     printf("c) Encryption Substitution Cipher\n");
@@ -18,7 +18,7 @@ int main()
     }
     printf("Encrypted message: %s\n", str);
 }
-}
+
 
 
 
