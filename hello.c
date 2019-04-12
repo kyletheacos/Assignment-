@@ -35,8 +35,8 @@ int main()
 		if(str[count] >= 97 && str[count] <= 122){
 			str[count] = str[count]-32 + key;
 			
-			if(str[count] > 122){
-				str[count] = str[count] - 122 + 65 - 1;
+			if(str[count] > 90){
+				str[count] = str[count] - 90 + 65 - 1;
 			}
 			
 		}
@@ -53,13 +53,3 @@ int main()
     printf("Encrypted message: %s\n", str);
 }
 
-
-
-   /* char c;
-	char text[101] = {'h', 'e', 'l', 'l', 'o', '\0'};
-  
-  printf("%c\n", &c, text[1] + 1);*/
-  
-  
-  
-  
