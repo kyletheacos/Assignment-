@@ -2,15 +2,29 @@
  char str[100];
     int key= 1; // how far to rotate
     int count = 0; // initalised
-    //test
+    int choice;
 int main()
 {
-    printf("Please select an option: \n"); //menu option 
-    printf("a) Encryption Rotation Cipher\n");
-    printf("b) Decryption Rotation Cipher\n");
-    printf("c) Encryption Substitution Cipher\n");
-    printf("d) Decryption Substitution Cipher\n\n");
+    printf("Please select an option: \n");
+    printf("1) Encryption Rotation Cipher\n");
+    printf("2) Decryption Rotation Cipher\n");
+    printf("3) Encryption Substitution Cipher\n");
+    printf("4) Decryption Substitution Cipher\n\n");
     printf("Selection: \n");
+    scanf("%d",&choice);
+    
+    
+ /*   switch (choice)
+ { 
+        case 1: Encryption Rotation Cipher ();
+         break;
+        case 2: Decryption cipher;
+         break;
+        case 3: Encryption SubstitutionCipher;
+         break;
+        case 4: Decryption Substitution Cipher;
+         break;
+ } */
     printf("Enter the message to encrypt:\n");
   scanf("%[^\n]s",str);
     for (count = 0; count < 100 && str[count] !='\0'; count++){
@@ -18,7 +32,6 @@ int main()
     }
     printf("Encrypted message: %s\n", str);
 }
-
 
 
 
