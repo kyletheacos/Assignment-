@@ -5,23 +5,24 @@
     int choice; // intialised to use for switch statement
 int main()
 {
-    printf("Please select an option: \n");         // hardcoded a userinterface to give the user options
+    printf("Enter the message:\n");
+    scanf("%[^\n]s",&str);
+    printf("Please select an option: \n"); // hardcoded a userinterface to give the user options
     printf("1) Encryption Rotation Cipher\n");
     printf("2) Decryption Rotation Cipher\n");
     printf("3) Encryption Substitution Cipher\n");
     printf("4) Decryption Substitution Cipher\n\n");
     printf("Selection: \n");
-    scanf("%d",&choice);  // scanf to recgonsie what option the user has selected
     
+    scanf("%d",&choice);  // scanf to recgonsie what option the user has selected
     
     switch (choice) 
  { 
         case 1: 
         printf("You entered 1\n");
-        printf("Enter the message to encrypt:\n");
     scanf("%[^\n]s",str);
-    for (count = 0; count < 100 && str[count] !='\0'; count++){
-     for(count = 0; str[count] != '\0'; count++){
+     for (count = 0; count < 100 && str[count] !='\0'; count++){
+      for(count = 0; str[count] != '\0'; count++){
 		if(str[count] >= 97 && str[count] <= 122){
 			str[count] = str[count]-32 + key;
 			
@@ -47,7 +48,6 @@ int main()
     
         case 2: 
         printf("You entered 2\n");
-        printf("Enter the message to Decrypt:\n");
   scanf("%[^\n]s",str);
     for (count = 0; count < 100 && str[count] !='\0'; count++){
   
