@@ -10,11 +10,11 @@ int main()
 {
     printf("Enter the message:\n");
     scanf("%[^\n]s",str);
-   for (count = 0; count < 100 && str[count] !='\0'; count++){
-   if(str[count] >= 97 && str[count] <= 122){
-			str[count] = str[count] - 32 ;
-    }
-   }
+        for (count = 0; count < 100 && str[count] !='\0'; count++){
+            if(str[count] >= 97 && str[count] <= 122){
+			    str[count] = str[count] - 32 ;
+             }
+        }
    
     printf("Please select an option: \n"); // hardcoded a userinterface to give the user options
     printf("1) Encryption Rotation Cipher\n");
@@ -25,36 +25,29 @@ int main()
     
     scanf("%d",&choice);  // scanf to recgonsie what option the user has selected
     
-    switch (choice) 
- { 
-        case 1: 
-        printf("You entered 1\n");
+        switch (choice){ 
+            case 1: 
+            printf("You entered 1\n");
+                for (count = 0; count < 100 && str[count] !='\0'; count++){
+                    if(str[count]>=65 && str[count]<=90){
+			        str[count] = str[count] + key;
+			         }
+			            if (str[count] > 90){
+			            str[count] = str[count] - 91 + 65;
+		        	    }
+                } printf("Encrypted message: %s\n", str);
+             break;
     
-     for (count = 0; count < 100 && str[count] !='\0'; count++){
-      if(str[count]>=65 && str[count]<=90){
-			str[count] = str[count] + key;
-			}
-			if (str[count] > 90){
-			    str[count] = str[count] - 91 + 65;
-			}
-
-    }
-
-    printf("Encrypted message: %s\n", str);
-
-     break;
-    
-        case 2: 
-        printf("You entered 2\n");
-  
-     for (count = 0; count < 100 && str[count] !='\0'; count++){
-      {
-			str[count] = str[count] - key;
-			}
-			if (str[count] < 65){
-			    str[count] = str[count] + 91 - 65;
-			}
-			}
+            case 2: 
+            printf("You entered 2\n");
+                for (count = 0; count < 100 && str[count] !='\0'; count++){
+			        if(str[count]>=65 && str[count]<=90)
+			        str[count] = str[count] - key;
+		        	}
+			            if (str[count] < 65){
+			            str[count] = str[count] + 91 - 65;
+			            }
+        
 	
 	
     printf("Decrypted message: %s\n", str);
@@ -65,7 +58,7 @@ int main()
         case 3: printf("You entered 3 \n");
          
      for (count = 0; count < 100 && str[count] !='\0'; count++){
-      {
+      
         switch(str[count]){
             case 65: 'A';
             str[count] = 'Q';
@@ -145,10 +138,6 @@ int main()
             case 90: 'Z';
             str[count] = 'M';
             break;
-            
-        }
-
-
 	}
 	
     }
@@ -157,7 +146,6 @@ int main()
         
         case 4: printf("You entered 4 \n");
           for (count = 0; count < 100 && str[count] !='\0'; count++){
-      {
         switch(str[count]){
             case 65: 'Q';
             str[count] = 'A';
@@ -237,8 +225,6 @@ int main()
             case 90: 'M';
             str[count] = 'Z';
             break;
-            
-        }
       }
           }
         printf("Decryption Substitution Cipher: %s\n", str);
