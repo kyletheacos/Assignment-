@@ -63,11 +63,12 @@ void rotationD(char str[]) {
             printf ("Enter Key (0-26): \n");
             scanf("%d", &key);
                 for (count = 0; count < 1000 && str[count] !='\0'; count++){
-			        if(str[count]>=65 && str[count]<=90)
+			        if(str[count]>=65 && str[count]<=90){
 			        str[count] = str[count] - key;
 		        	}
 			            if (str[count] < 65){
-			            str[count] = str[count] + 91 - 65;
+			            str[count] = str[count] + 26;
+			            }
 			    } printf("Decrypted message: %s\n", str);
             
 }
