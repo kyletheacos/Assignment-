@@ -9,7 +9,6 @@ void substitutionD(char str[]);
     int key = 1; // how far to rotate
     int count = 0; // initalised int count
     int choice; // intialised to use for switch statement
-    int k;
 int main()
 {
     printf("Enter the message:\n");
