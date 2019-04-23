@@ -6,7 +6,7 @@ void substitutionE(char str[]);
 void substitutionD(char str[]);
 
  char str[1000]; // initialised a 1000 character string 
-    int key = 1; // how far to rotate
+    int key; // how far to rotate
     int count = 0; // initalised int count
     int choice; // intialised to use for switch statement
 int main()
@@ -46,6 +46,8 @@ int main()
 
 void rotationE(char str[]) {
             printf("You entered 1\n");
+            printf ("Enter Key (0-26): \n");
+            scanf("%d", &key);
                 for (count = 0; count < 1000 && str[count] !='\0'; count++){
                     if(str[count]>=65 && str[count]<=90){
 			        str[count] = str[count] + key;
@@ -58,6 +60,8 @@ void rotationE(char str[]) {
 
 void rotationD(char str[]) {
             printf("You entered 2\n");
+            printf ("Enter Key (0-26): \n");
+            scanf("%d", &key);
                 for (count = 0; count < 1000 && str[count] !='\0'; count++){
 			        if(str[count]>=65 && str[count]<=90)
 			        str[count] = str[count] - key;
