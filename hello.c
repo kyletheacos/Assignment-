@@ -26,32 +26,25 @@ int main()
     printf("3) Encryption Substitution Cipher\n");
     printf("4) Decryption Substitution Cipher\n\n");
     printf("Selection: \n");
-    
     scanf("%d",&choice);  // scanf to recgonsie what option the user has selected
     
     switch (choice){ // switch statement to run different cases depending on what user selects
-        case 1: {
-            void rotationE(char str[]);
-        }
+        case 1: 
+            rotationE(str);
             break;
-        case 2: {
-            void rotationD(char str[]);
-        }
+        case 2: 
+            rotationD(str);
             break;
-        case 3: {
-            void substitutionE(char str[]);
-        }
+        case 3: 
+            substitutionE(str);
             break;
-        case 4: {
-            void substitutionD(char str[]);
-        }
-            break; {
+        case 4: 
+            substitutionD(str);
+            break; 
         default: printf("You didn't select one of the preferences");
-        }
+    }   
 }    
 
-        
-        
 void rotationE(char str[]) {
             printf("You entered 1\n");
                 for (count = 0; count < 100 && str[count] !='\0'; count++){
@@ -196,6 +189,7 @@ void substitutionD(char str[]) {
     	        }
             } printf("Decryption Substitution Cipher: %s\n", str);
 }
-}
+
+
 
 
