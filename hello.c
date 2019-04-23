@@ -5,7 +5,7 @@ void rotationD(char str[]);
 void substitutionE(char str[]);
 void substitutionD(char str[]);
 
- char str[100]; // initialised a 100 character string 
+ char str[1000]; // initialised a 1000 character string 
     int key = 1; // how far to rotate
     int count = 0; // initalised int count
     int choice; // intialised to use for switch statement
@@ -13,7 +13,7 @@ int main()
 {
     printf("Enter the message:\n");
     scanf("%[^\n]s",str);
-        for (count = 0; count < 100 && str[count] !='\0'; count++){
+        for (count = 0; count < 1000 && str[count] !='\0'; count++){
             if(str[count] >= 97 && str[count] <= 122){
 			    str[count] = str[count] - 32 ;
              }
@@ -46,7 +46,7 @@ int main()
 
 void rotationE(char str[]) {
             printf("You entered 1\n");
-                for (count = 0; count < 100 && str[count] !='\0'; count++){
+                for (count = 0; count < 1000 && str[count] !='\0'; count++){
                     if(str[count]>=65 && str[count]<=90){
 			        str[count] = str[count] + key;
 			         }
@@ -58,7 +58,7 @@ void rotationE(char str[]) {
 
 void rotationD(char str[]) {
             printf("You entered 2\n");
-                for (count = 0; count < 100 && str[count] !='\0'; count++){
+                for (count = 0; count < 1000 && str[count] !='\0'; count++){
 			        if(str[count]>=65 && str[count]<=90)
 			        str[count] = str[count] - key;
 		        	}
@@ -70,7 +70,7 @@ void rotationD(char str[]) {
 
 void substitutionE(char str[]) {
             printf("You entered 3 \n");
-            for (count = 0; count < 100 && str[count] !='\0'; count++){
+            for (count = 0; count < 1000 && str[count] !='\0'; count++){
                 switch(str[count]){
                 case 'A': str[count] = 'Q';
                 break;
@@ -131,7 +131,7 @@ void substitutionE(char str[]) {
 
 void substitutionD(char str[]) {
             printf("You entered 4 \n");
-            for (count = 0; count < 100 && str[count] !='\0'; count++){
+            for (count = 0; count < 1000 && str[count] !='\0'; count++){
                 switch(str[count]){
                 case 'Q': str[count] = 'A';
                 break;
