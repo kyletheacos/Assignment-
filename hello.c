@@ -1,8 +1,12 @@
 
 #include <stdio.h>
+void rotationE(char str[]); //Function Definition 
+void rotationD(char str[]);
+void substitutionE(char str[]);
+void substitutionD(char str[]);
 
  char str[100]; // initialised a 100 character string 
-    int key= 1; // how far to rotate
+    int key = 1; // how far to rotate
     int count = 0; // initalised int count
     int choice; // intialised to use for switch statement
     int k;
@@ -25,8 +29,25 @@ int main()
     
     scanf("%d",&choice);  // scanf to recgonsie what option the user has selected
     
-        switch (choice){ 
-            case 1: 
+    switch (choice){ // switch statement to run different cases depending on what user selects
+        case 1: 
+            void rotationE(char str[]);
+            break;
+        case 2: 
+            void rotationD(char str[]);
+            break;
+        case 3:
+            void substitutionE(char str[]);
+            break;
+        case 4:
+            void substitutionD(char str[]);
+            break;
+        default: printf("You didn't select one of the preferences");
+        }
+        
+        
+        
+void rotationE(char str[])) {
             printf("You entered 1\n");
                 for (count = 0; count < 100 && str[count] !='\0'; count++){
                     if(str[count]>=65 && str[count]<=90){
@@ -36,9 +57,9 @@ int main()
 			            str[count] = str[count] - 91 + 65;
 		        	    }
                 } printf("Encrypted message: %s\n", str);
-             break;
-    
-            case 2: 
+}
+
+void rotationD(char str[]) {
             printf("You entered 2\n");
                 for (count = 0; count < 100 && str[count] !='\0'; count++){
 			        if(str[count]>=65 && str[count]<=90)
@@ -47,11 +68,10 @@ int main()
 			            if (str[count] < 65){
 			            str[count] = str[count] + 91 - 65;
 			    } printf("Decrypted message: %s\n", str);
-            break;
+            
+}
 
-
-                      case 3: 
-            //void substitutionE(char str[])
+void substitutionE(char str[]) {
             printf("You entered 3 \n");
             for (count = 0; count < 100 && str[count] !='\0'; count++){
                 switch(str[count]){
@@ -109,10 +129,10 @@ int main()
                 break;
     	        }
             } printf("Encryption Substitution Cipher: %s\n", str);
-            break;
+}
             
-            case 4: 
-            //void substitutionD(char str[]) {
+
+void substitutionD(char str[]) {
             printf("You entered 4 \n");
             for (count = 0; count < 100 && str[count] !='\0'; count++){
                 switch(str[count]){
@@ -170,11 +190,7 @@ int main()
                 break;
     	        }
             } printf("Decryption Substitution Cipher: %s\n", str);
-            break;
-            
-            default: printf("You didn't select one of the preferences");
- }    
- return 0;
- }
+}
+
 
 
