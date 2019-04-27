@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 void rotationE(char str[]); //Function Definition 
 void rotationD(char str[]);
@@ -11,10 +10,10 @@ void substitutionD(char str[]);
     int choice; // intialised to use for switch statement
 int main()
 {
-    printf("Enter the message:\n");
-    scanf("%[^\n]s",str);
-        for (count = 0; count < 1000 && str[count] !='\0'; count++){
-            if(str[count] >= 97 && str[count] <= 122){
+    printf("Enter the message:\n"); //User adds message that will be encypted or decrypted depending on the option they select
+    scanf("%[^\n]s",str); // It is than read for str and the [^\n] will read past blank spaces instead of printing characters
+        for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
+            if(str[count] >= 97 && str[count] <= 122){ //this if statement converts lowercase letter into uppercase by taking away 32 from the Ascii Values it converts it from lowercase letters to uppercase.
 			    str[count] = str[count] - 32 ;
              }
         }
@@ -29,30 +28,30 @@ int main()
     
     switch (choice){ // switch statement to run different cases depending on what user selects
         case 1: 
-            rotationE(str);
-            break;
+            rotationE(str); // Takes it to the function to run the code 
+            break; // breaks if executed
         case 2: 
-            rotationD(str);
-            break;
+            rotationD(str); // Takes it to the function to run the code 
+            break; // breaks if executed
         case 3: 
-            substitutionE(str);
-            break;
+            substitutionE(str); // Takes it to the function to run the code 
+            break; // breaks if executed
         case 4: 
-            substitutionD(str);
-            break; 
-        default: printf("You didn't select one of the preferences");
+            substitutionD(str); // Takes it to the function to run the code 
+            break;  // breaks if executed
+        default: printf("You didn't select one of the preferences"); //Prints if nothing was selected
     }   
 }    
 
-void rotationE(char str[]) {
-            printf("You entered 1\n");
-            printf ("Enter Key (0-26): \n");
+void rotationE(char str[]) { // function defintion 
+            printf("You entered 1\n"); //the selection you made 
+            printf ("Enter Key (0-26): \n"); //Selecting a key will rotate it by that number
             scanf("%d", &key);
-                for (count = 0; count < 1000 && str[count] !='\0'; count++){
-                    if(str[count]>=65 && str[count]<=90){
+                for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
+                    if(str[count]>=65 && str[count]<=90){ //If statement is saying if the Ascii Value is between 65 and 90 add the key which was selected
 			        str[count] = str[count] + key;
 			         }
-			            if (str[count] > 90){
+			            if (str[count] > 90){ //This if statement is saying if the Ascii Value is greater then 90 it will -91 from the value and then add 65
 			            str[count] = str[count] - 91 + 65;
 		        	    }
                 } printf("Encrypted message: %s\n", str);
@@ -62,7 +61,7 @@ void rotationD(char str[]) {
             printf("You entered 2\n");
             printf ("Enter Key (0-26): \n");
             scanf("%d", &key);
-                for (count = 0; count < 1000 && str[count] !='\0'; count++){
+                for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
 			        if(str[count]>=65 && str[count]<=90){
 			        str[count] = str[count] - key;
 		        	}
@@ -75,9 +74,9 @@ void rotationD(char str[]) {
 
 void substitutionE(char str[]) {
             printf("You entered 3 \n");
-            for (count = 0; count < 1000 && str[count] !='\0'; count++){
+            for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
                 switch(str[count]){
-                case 'A': str[count] = 'Q';
+                case 'A': str[count] = 'Q'; // If the user types A it will switch to Q as it 
                 break;
                 case 'B': str[count] = 'W';
                 break;
@@ -136,7 +135,7 @@ void substitutionE(char str[]) {
 
 void substitutionD(char str[]) {
             printf("You entered 4 \n");
-            for (count = 0; count < 1000 && str[count] !='\0'; count++){
+            for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
                 switch(str[count]){
                 case 'Q': str[count] = 'A';
                 break;
