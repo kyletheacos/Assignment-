@@ -45,7 +45,7 @@ int main()
 
 void rotationE(char str[]) { // function defintion 
             printf("You entered 1\n"); //the selection you made 
-            printf ("Enter Key (0-26): \n"); //Selecting a key will rotate it by that number
+            printf ("Enter Key (0-26): \n"); //Selecting a key will rotate it by that number (26 will just rotate it back to the start where A = A)
             scanf("%d", &key);
                 for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
                     if(str[count]>=65 && str[count]<=90){ //If statement is saying if the Ascii Value is between 65 and 90 add the key which was selected
@@ -58,8 +58,8 @@ void rotationE(char str[]) { // function defintion
 }
 
 void rotationD(char str[]) { //function definition
-            printf("You entered 2\n");
-            printf ("Enter Key (0-26): \n");
+            printf("You entered 2\n"); //the selection you made
+            printf ("Enter Key (0-26): \n"); //Selecting a key will rotate it by that number (26 will just rotate it back to the start where A = A)
             scanf("%d", &key);
                 for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
 			        if(str[count]>=65 && str[count]<=90){ //If statement is saying if the Ascii Value is between 65 and 90 subtract the key which was selected
@@ -73,7 +73,7 @@ void rotationD(char str[]) { //function definition
 }
 
 void substitutionE(char str[]) { //function definition
-            printf("You entered 3 \n");
+            printf("You entered 3 \n"); //the selection you made
             for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
                 switch(str[count]){
                 case 'A': str[count] = 'Q'; // If the user types A it will substitute for Q 
@@ -134,7 +134,7 @@ void substitutionE(char str[]) { //function definition
             
 
 void substitutionD(char str[]) { //function definition
-            printf("You entered 4 \n");
+            printf("You entered 4 \n"); //the selection you made
             for (count = 0; count < 1000 && str[count] !='\0'; count++){ // this for loop is saying when the count is equal to zero it will start reading up until it is less than 1000 characters. It will count up until 1000. It will also not be equal to zero. 
                 switch(str[count]){
                 case 'Q': str[count] = 'A'; // If the user types Q it will substitute for A
